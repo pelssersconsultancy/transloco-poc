@@ -123,6 +123,60 @@
           }
         }
       }
+    },
+    "lazyloaded-feature": {
+      "projectType": "library",
+      "root": "libs/lazyloaded-feature",
+      "sourceRoot": "libs/lazyloaded-feature/src",
+      "prefix": "transloco-poc",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/lazyloaded-feature/tsconfig.lib.json",
+              "libs/lazyloaded-feature/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/lazyloaded-feature/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/lazyloaded-feature/jest.config.js",
+            "tsConfig": "libs/lazyloaded-feature/tsconfig.spec.json",
+            "setupFile": "libs/lazyloaded-feature/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "lazyloaded-shared-ui": {
+      "projectType": "library",
+      "root": "libs/lazyloaded-shared-ui",
+      "sourceRoot": "libs/lazyloaded-shared-ui/src",
+      "prefix": "transloco-poc",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/lazyloaded-shared-ui/tsconfig.lib.json",
+              "libs/lazyloaded-shared-ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/lazyloaded-shared-ui/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/lazyloaded-shared-ui/jest.config.js",
+            "tsConfig": "libs/lazyloaded-shared-ui/tsconfig.spec.json",
+            "setupFile": "libs/lazyloaded-shared-ui/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {

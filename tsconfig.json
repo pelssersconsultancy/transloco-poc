@@ -15,7 +15,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@transloco-poc/lazyloaded-feature": [
+        "libs/lazyloaded-feature/src/index.ts"
+      ],
+      "@transloco-poc/lazyloaded-shared-ui": [
+        "libs/lazyloaded-shared-ui/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
